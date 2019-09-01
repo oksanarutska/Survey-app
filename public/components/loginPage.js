@@ -40,27 +40,19 @@ class LoginPage {
             <div class="action__login_user">
               <p class="action__login_user__text">Email:</p>
               <div class="action__login_user__form">
-
                 <input id="email" type="email" required class="action__login_user__form_input">
-
-
-
               </div>
             </div>
             <div class="action__login_user">
               <p class="action__login_user__text">Придумайте пароль:</p>
               <div class="action__login_user__form">
-
                 <input  id="password" type="password" required class="action__login_user__form_input">
-                
-
-              </div>
+               </div>
             </div>
             <div class="action__login_user__age">
               <input type="checkbox" id="terms" required>
               <p class="action__login_user__age-description" id="terms_text">Регистрируясь, вы подтверждаете, что вам уже исполнилось 18
                </p>
-
             </div>
             <div class="action__login_user">
               <button type="submit" id="submit" class="button button_login">
@@ -70,9 +62,7 @@ class LoginPage {
               </button>
             </div>
 </form>
-           
-
-
+         
           </div>
         </div>
 
