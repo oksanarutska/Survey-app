@@ -106,12 +106,12 @@ class LoginPage {
 
         document.querySelector('#submit').addEventListener('click', function (e) {
             if (!form.isValid()) {
-                alert('not!');
+                alert('Не все поля заполнены!');
                 e.preventDefault();
                 return
             }
 
-            alert('Ok!')
+            alert('Спасибо за регистрацию!')
         })
 
 
