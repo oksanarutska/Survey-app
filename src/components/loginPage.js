@@ -81,7 +81,7 @@ class LoginPage {
     `;
 
         this.button = [...document.querySelectorAll('.container_label')];
-        this.button.forEach(b =>{
+        this.button.forEach(b => {
             b.addEventListener("click", (e) => {
                 this.button.forEach(x => x.classList.remove('button_choice--selected'))
                 b.classList.add('button_choice--selected');
@@ -106,7 +106,7 @@ class LoginPage {
 
         document.querySelector('#submit').addEventListener('click', function (e) {
             if (!form.isValid()) {
-                alert('Не все поля заполнены!');
+                alert('Поля не заполнены!');
                 e.preventDefault();
                 return
             }
@@ -116,9 +116,6 @@ class LoginPage {
 
 
     }
-
-
-
 
 
 }

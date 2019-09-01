@@ -5,6 +5,8 @@ var gulp = require('gulp'),
     prefix = require('gulp-autoprefixer'),
     browserSync = require('browser-sync');
 
+const prettier = require('gulp-prettier');
+
 var paths = {
     public: './public/',
     images: './public/images',
@@ -21,6 +23,7 @@ gulp.task('assets', function () {
 gulp.task('js', function () {
     return gulp.src('./src/**/*.js*')
         .pipe(gulp.dest(paths.public))
+        .pipe(prettier({ singleQuote: true }))
         .pipe(browserSync.reload({
             stream: true
         }));

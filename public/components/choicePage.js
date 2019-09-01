@@ -57,7 +57,7 @@ class ChoicePage {
 
         this.buttonNext.style.display = 'block';
 
-        overlay.show('#fc8950',`
+        overlay.show("#fc8950",`
             <p class="overlay__message_tittle">
               ${e.currentTarget.dataset.number}%
             </p>

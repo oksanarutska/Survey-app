@@ -65,7 +65,7 @@ class ChoiceSexPage {
             <p class="overlay__message_tittle">
               ${e.currentTarget.dataset.number}%
             </p>
-            <p class="overlay__message_text">люди обращают внимание на ${e.currentTarget.dataset.sex}</p>
+            <p class="overlay__message_text">пользователей - вариант ${e.currentTarget.dataset.sex}</p>
 
           `)
 
