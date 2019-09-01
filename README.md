@@ -1,7 +1,7 @@
 
 [Demo](https://oksanarutska.github.io/Survey-app/public/index.html)
 ## Technology
-- sass
+- scss
 - js
 - gulp
 
