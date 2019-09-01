@@ -122,7 +122,11 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-
+    animation: animationPage 1s ease-out;
+    @keyframes animationPage {
+      0%   { opacity: 0; }
+      100% { opacity: 1; }
+    }
     &-choice {
       min-width: 550px;
       //background: $color_orange;
