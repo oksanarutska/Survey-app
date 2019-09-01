@@ -1,0 +1,128 @@
+@import "../variable";
+
+.button{
+  cursor: pointer;
+  text-align: center;
+  //background: $color_pink;
+  background: var(--main-color);
+  line-height: 50px;
+  padding: 1px 30px;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  margin-left: 6px;
+  &::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: $color_gray_light;
+    transition: all 0.3s;
+    transform: translate(-13%,-190%) rotate(-30deg);
+    transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+    &:hover{
+      transform: translate(0,0);
+    }
+  }
+  &::after{
+    transition-delay: 0.2s;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: $color_gray_light;
+    transition: all 0.3s;
+    transform: translate(-13%,-190%) rotate(-30deg);
+    transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+    &:hover{
+      transform: translate(0,0);
+    }
+  }
+  &:hover{
+    &::before{
+      transform: translate(0,0)
+    }
+    &::after{
+      transition-delay: 0.2s;
+      transform: translate(0,0)
+    }
+  }
+  &_name{
+    color: $color_white;
+    font-family: $font-family;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+  }
+}
+
+.button_choice{
+  background: $color_white;
+  transition: all 0.5s;
+  border: 1px solid $color_black_light;
+  position: relative;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  padding: 12px 60px;
+  margin: 15px 0 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color:  var(--main-color);
+    opacity: 0;
+    border-radius: 5px;
+    transition: all 0.4s;
+    transform: scale(0.5, 1);
+  }
+  &:hover,
+  &--selected {
+
+    & .button_choice__name {
+      color: white;
+      z-index: 2;
+    }
+
+    &::before{
+      opacity: 1;
+      transform: scale(1, 1);
+      z-index: 1;
+    }
+  }
+
+  &__name{
+    color: $color_gray;
+    font-family: $font-family;
+    font-size: 16px;
+    font-weight: bold;
+    position: relative;
+    z-index: 3;
+    &:hover{
+      color: $color_white;
+      z-index: 1;
+    }
+  }
+  &__icon{
+    height: 22px;
+    margin-right: 10px;
+    position: relative;
+    z-index: 2;
+  }
+}

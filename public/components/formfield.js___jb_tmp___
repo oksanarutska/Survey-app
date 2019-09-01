@@ -1,0 +1,48 @@
+class Formfield {
+    constructor(inputElement, options, message) {
+        this.inputElement = inputElement;
+        this.options = options;
+        this.message = message
+
+    }
+
+    isValid() {
+        let emailRegExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        let isCheckBox = this.inputElement.type === 'checkbox';
+        let isRadio = this.inputElement.type === 'radio';
+
+        let value = isCheckBox || isRadio
+            ? this.inputElement.checked
+            : this.inputElement.value;
+
+        if (this.options.require && !value) {
+            this.inputElement.classList.add('form_input--error');
+
+            if (isCheckBox) {
+                this.inputElement.nextElementSibling.style.color = 'red';
+            } else if (isRadio) {
+                this.inputElement.style.border = 'red';
+            } else {
+                this.inputElement.placeholder = this.message;
+            }
+            
+            return false
+        }
+
+        if (this.options.email && !emailRegExp.test(value)) {
+            this.inputElement.classList.add('form_input--error');
+
+            return false
+        }
+
+        else {
+            this.inputElement.classList.remove('form_input--error');
+            if (isCheckBox) {
+                this.inputElement.nextElementSibling.style.color = 'black'
+            }
+            return true
+        }
+
+    }
+
+}

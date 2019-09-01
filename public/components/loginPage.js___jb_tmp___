@@ -1,0 +1,74 @@
+class LoginPage {
+    render(container){
+        container.innerHTML =  `
+            <div class="container-content">
+        <div class="action">
+          <p class="action__tittle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, consequuntur et!</p>
+          <div class="action__login">
+
+            <div class="action__login_user">
+              <p class="action__login_user__text">Я ищу:</p>
+              <div class="action__login_user__button">
+                <div class="button_choice sex">
+                  <img class="button_choice__icon" src="img/icon_man.png" alt="icon_man">
+                  <span class="button_choice__name">Вариант А</span>
+                </div>
+
+                <div class="button_choice sex">
+                  <img class="button_choice__icon" src="img/icon_woman.png" alt="icon_woman">
+                  <span class="button_choice__name">Вариант Б</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="action__login_user">
+              <p class="action__login_user__text">Ваше имя:</p>
+              <div class="action__login_user__form">
+
+                <input type="text" class="action__login_user__form_input">
+
+
+              </div>
+            </div>
+            <div class="action__login_user">
+              <p class="action__login_user__text">Email:</p>
+              <div class="action__login_user__form">
+
+                <input type="email" class="action__login_user__form_input">
+
+
+
+              </div>
+            </div>
+            <div class="action__login_user">
+              <p class="action__login_user__text">Придумайте пароль:</p>
+              <div class="action__login_user__form">
+
+                <input type="password" class="action__login_user__form_input">
+
+
+              </div>
+            </div>
+            <div class="action__login_user__age">
+              <input type="checkbox">
+              <p class="action__login_user__age-description">Регистрируясь, вы подтверждаете, что вам уже исполнилось 18
+                лет и вы ознакомились с условиями пользования сайтом.</p>
+
+            </div>
+            <div class="action__login_user">
+              <div class="button button_login">
+           <span class="button_name button_login-name">
+             Продолжить
+           </span>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+
+      </div>
+
+    `
+    }
+}
