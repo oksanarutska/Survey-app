@@ -1,12 +1,12 @@
-const slides = [
-    new WelcomPage(),
-    new ChoicePage(),
-    new ChoiceSexPage(),
-    new LoginPage()
-];
-const screenSlideContainer = document.querySelector('#main');
-const screenSlide = new Slider(screenSlideContainer, slides);
+var slider = new Slider({
+    root: document.querySelector("#slider")
+});
+var overlay = new Overlay({});
+ChoicePage();
+ChoiceSexPage();
+FormValidate();
 
-const overlayContainer = document.querySelector('.overlay');
-const overlay = new Overlay(overlayContainer);
 
+document.querySelector('#button_start').addEventListener('click', function (e) {
+    slider.next();
+});

@@ -1,18 +1,16 @@
-class Overlay {
-    constructor(overlay) {
-        this.container = overlay
+function Overlay(){
+     var container = document.querySelector('.overlay');
+return{
+    show: function(color, percent, text) {
+        container.style.display = 'flex';
+        container.style.setProperty('--main-color', color);
+        container.querySelector('.overlay__message_tittle').innerHTML = percent;
+        container.querySelector('.overlay__message_text').innerHTML = text
+    },
 
+   hide: function() {
+        container.style.display = 'none'
     }
-
-    show(color, html) {
-        this.container.style.display = 'flex';
-        this.container.style.setProperty('--main-color', color);
-        this.container.querySelector('.overlay__message').innerHTML = html
-    }
-
-    hide() {
-        this.container.style.display = 'none'
-    }
-
+}
 
 }

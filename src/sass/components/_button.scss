@@ -5,6 +5,7 @@
   text-align: center;
   //background: $color_pink;
   background: var(--main-color);
+  border: none;
   line-height: 50px;
   padding: 1px 30px;
   transition: all 0.3s;
@@ -12,6 +13,7 @@
   overflow: hidden;
   border-radius: 15px;
   margin-left: 6px;
+  outline: none;
   &::before {
     content: '';
     position: absolute;
@@ -77,6 +79,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  outline: none;
 
   &::before {
     content: '';
@@ -97,6 +100,10 @@
 
     & .button_choice__name {
       color: white;
+      z-index: 2;
+    }
+    & .button_choice__icon {
+      fill: white;
       z-index: 2;
     }
 
@@ -124,5 +131,6 @@
     margin-right: 10px;
     position: relative;
     z-index: 2;
+
   }
 }

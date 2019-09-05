@@ -1,24 +1,20 @@
-class Formfield {
-    constructor(inputElement, options, message) {
-        this.inputElement = inputElement;
-        this.options = options;
-        this.message = message
+function Formfield() {
 
-    }
+        var inputElement = document.querySelector('.action__login_user__form_input');
 
-    isValid() {
-        let emailRegExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-        let isCheckBox = this.inputElement.type === 'checkbox';
-        let isRadio = this.inputElement.type === 'radio';
-        let radioButtons = [...document.querySelectorAll(`input[name="${this.inputElement.name}"]`)];
 
-        let value = isCheckBox || isRadio
-            ? this.inputElement.checked
-            : this.inputElement.value;
+        var emailRegExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        var isCheckBox = inputElement.type === 'checkbox';
+        var isRadio = inputElement.type === 'radio';
+        var radioButtons = [...document.querySelectorAll(`input[name="${inputElement.name}"]`)];
 
-        if (this.options.require) {
+        var value = isCheckBox || isRadio
+            ? inputElement.checked
+            : inputElement.value;
+
+        if (inputElement.require) {
             if (isCheckBox && !value) {
-                this.inputElement.nextElementSibling.style.color = 'red';
+                inputElement.nextElementSibling.style.color = 'red';
                 return false
             }
 
@@ -29,8 +25,7 @@ class Formfield {
 
             if (!isRadio && !value) {
                 this.inputElement.classList.add('form_input--error');
-                this.inputElement.placeholder = this.message;
-
+                this.inputElement.nextElementSibling.style.display = 'block';
                 return false
             }
         }
@@ -42,6 +37,7 @@ class Formfield {
 
         if (isCheckBox) {
             this.inputElement.nextElementSibling.style.color = 'black'
+
         } else if (isRadio) {
             radioButtons.forEach(rb => rb.parentElement.classList.remove('form_input--error'))
         }else {
@@ -49,6 +45,5 @@ class Formfield {
         }
 
         return true
-    }
 
 }

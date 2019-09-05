@@ -1,28 +1,28 @@
-class Slider {
-    constructor(container, slides) {
-        if (!slides || slides.length === 0) {
-            console.error("No slides passed in Slider class");
-            return;
+function Slider(options) {
+    var container = options.root.querySelector('.slider-container');
+    var sliders = [];
+    var slidersChildren = container.children;
+
+    for (var i = 0; i < slidersChildren.length; i++) {
+        sliders.push(slidersChildren[i])
+    }
+    var step = 0;
+
+    return {
+        next: function () {
+            step++;
+            sliders[step - 1].classList.toggle('hide');
+            sliders[step].classList.toggle('hide');
+
+        },
+        prev: function () {
+            step--;
+            sliders[step + 1].classList.toggle('hide');
+            sliders[step].classList.toggle('hide');
         }
-
-        this.container = container;
-        this.slides = slides;
-        this.currentSlideNumber = 0;
-        this.apply();
-    }
-
-    prevSlide() {
-        this.currentSlideNumber--;
-        this.apply();
-    }
-
-    nextSlide() {
-        this.currentSlideNumber++;
-        this.apply();
-    }
-
-    apply() {
-        const currentSlide = this.slides[this.currentSlideNumber];
-        currentSlide.render(this.container);
     }
 }
+
+
+
+

@@ -1,7 +1,7 @@
 @import "../variable";
 
 .login {
-  width: 97.5%;
+  width: 98.5%;
   background: $color_moko;
   height: 80%;
   padding-top: 40px;
@@ -35,7 +35,6 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        margin-bottom: 6px;
         width: 100%;
         &__text {
           color: $color_gray;
@@ -55,6 +54,7 @@
         }
         &__form {
           width: 100%;
+
           &_input {
             width: 97%;
             border: 1px solid $color_black_light;
@@ -65,6 +65,23 @@
             color: $color_black_light;
             font-family: $font-family;
             font-size: 14px;
+            outline: none;
+            &:focus {
+              border: 1px solid $color_blue;
+            }
+            &--error {
+              font-family: $font-family;
+              font-size: 12px;
+              color: $color_red;
+              display: none;
+              text-align: center;
+              margin: 0 auto;
+              justify-content: center;
+
+            }
+            &.isError {
+              border: 1px solid $color_red;
+            }
           }
 
         }
@@ -87,6 +104,9 @@
           margin-top: 10px;
           border: 1px solid $color_blue;
           background: white;
+          &.isError{
+            border: 1px solid $color_red;
+          }
           &:hover {
             & .button_login-name {
               color: $color_white;

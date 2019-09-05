@@ -29,7 +29,7 @@ body {
   & .container-img {
     position: relative;
     height: 100%;
-    background: url("../img/photo_girl.png") no-repeat;
+    background: url("../img/man_girl.png") no-repeat;
     background-size: cover;
     display: flex;
     flex-grow: 1;
@@ -97,17 +97,17 @@ body {
     }
     &-choice {
       min-width: 550px;
-      //background: $color_orange;
+      background: $color_orange;
     }
 
     &-choice-sex {
       min-width: 550px;
-      //background: $color_yellow;
+      background: $color_yellow;
     }
 
     &-login {
       min-width: 550px;
-      //background: $color_blue;
+      background: $color_blue;
     }
 
     &__img {
@@ -122,10 +122,14 @@ body {
   }
 }
 
-.form_input--error {
-  border: 1px solid $color_red !important;
 
-  &::-webkit-input-placeholder {
-    color: red !important;
-  }
+.hide{
+  display: none!important;
+}
+.show{
+  display: flex!important;
+}
+
+.isError{
+  border: 1px solid $color_red;
 }
