@@ -12,10 +12,10 @@
   animation: animationOverlay 1s ease-out;
   @keyframes animationOverlay {
     0% {
-      transform: scale(0)
+      transform: scale(0);
     }
     100% {
-      transform: scale(1)
+      transform: scale(1);
     }
   }
   &_color {

@@ -15,7 +15,7 @@
   margin-left: 6px;
   outline: none;
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -32,7 +32,7 @@
   }
   &::after {
     transition-delay: 0.2s;
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -49,11 +49,11 @@
   }
   &:hover {
     &::before {
-      transform: translate(0, 0)
+      transform: translate(0, 0);
     }
     &::after {
       transition-delay: 0.2s;
-      transform: translate(0, 0)
+      transform: translate(0, 0);
     }
   }
   &_name {
@@ -62,7 +62,6 @@
     font-size: 18px;
     font-weight: bold;
     text-transform: uppercase;
-
   }
 }
 
@@ -82,7 +81,7 @@
   outline: none;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -97,7 +96,6 @@
   }
   &:hover,
   &--selected {
-
     & .button_choice__name {
       color: white;
       z-index: 2;
@@ -131,6 +129,5 @@
     margin-right: 10px;
     position: relative;
     z-index: 2;
-
   }
 }

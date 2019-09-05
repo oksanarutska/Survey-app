@@ -1,12 +1,9 @@
-var slider = new Slider({
-    root: document.querySelector("#slider")
-});
-var overlay = new Overlay({});
+var slider = getSlider();
+var overlay = Overlay();
 ChoicePage();
 ChoiceSexPage();
 FormValidate();
 
-
-document.querySelector('#button_start').addEventListener('click', function (e) {
-    slider.next();
+document.querySelector("#button_start").addEventListener("click", function(e) {
+  slider.next();
 });

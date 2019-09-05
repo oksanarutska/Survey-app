@@ -1,5 +1,5 @@
-function Slider(options) {
-    var container = options.root.querySelector('.slider-container');
+function getSlider() {
+    var container = document.querySelector("#slider").querySelector('.slider-container');
     var sliders = [];
     var slidersChildren = container.children;
 

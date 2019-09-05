@@ -5,7 +5,8 @@
   "scripts": {
     "start": "gulp",
     "build": "gulp build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write \"src/**/*.{js,scss,html}\""
   },
   "devDependencies": {
     "browser-sync": "^2.26.7",

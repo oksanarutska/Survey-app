@@ -1,7 +1,5 @@
-var slider = new Slider({
-    root: document.querySelector("#slider")
-});
-var overlay = new Overlay({});
+var slider = getSlider();
+var overlay = Overlay();
 ChoicePage();
 ChoiceSexPage();
 FormValidate();

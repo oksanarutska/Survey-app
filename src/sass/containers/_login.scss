@@ -77,13 +77,11 @@
               text-align: center;
               margin: 0 auto;
               justify-content: center;
-
             }
             &.isError {
               border: 1px solid $color_red;
             }
           }
-
         }
         &__age {
           display: flex;
@@ -105,7 +103,7 @@
           margin-top: 10px;
           border: 1px solid $color_blue;
           background: white;
-          &.isError{
+          &.isError {
             border: 1px solid $color_red;
           }
           &:hover {
@@ -125,9 +123,7 @@
         }
       }
     }
-
   }
-
 }
 
 .container_label {
@@ -140,6 +136,5 @@
     position: absolute;
     opacity: 0;
     cursor: pointer;
-
   }
 }
