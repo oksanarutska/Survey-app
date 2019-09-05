@@ -95,16 +95,20 @@ body {
     }
     &-choice {
       min-width: 550px;
+      max-width: 600px;
       background: $color_orange;
     }
 
     &-choice-sex {
       min-width: 550px;
+      max-width: 600px;
       background: $color_yellow;
     }
 
     &-login {
+
       min-width: 550px;
+      max-width: 600px;
       background: $color_blue;
     }
 

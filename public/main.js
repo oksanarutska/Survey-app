@@ -4,7 +4,6 @@ ChoicePage();
 ChoiceSexPage();
 FormValidate();
 
-
-document.querySelector('#button_start').addEventListener('click', function (e) {
-    slider.next();
+document.querySelector("#button_start").addEventListener("click", function(e) {
+  slider.next();
 });
